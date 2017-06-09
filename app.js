@@ -87,7 +87,7 @@ function getWeather(lat, lng) {
 function renderWeather(data){
   //console.log(data)
   showSection("weather")
-  renderBackground()
+  //renderBackground()
   if(data){
     for(var i in data.list) {
       var element = $("#weather > .row > .condition")
@@ -95,15 +95,24 @@ function renderWeather(data){
       if(i!=0) element = element.clone().appendTo( "#forecast" ); // duplicate condition
       condition = data.list[i]
       var date = new Date(condition.dt*1000);
+      if(i==0) {
+        $('#weather').addClass("wi-owm-"+condition.weather[0].id)
+      }
       day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][date.getDay()]
       element.find(".icon i").addClass("wi-owm-"+condition.weather[0].id)
       element.find(".date .value").text(day)
+      element.find(".temp .eve .value").text(Math.ceil(condition.temp.eve)+" C°")
       element.find(".temp .min .value").text(condition.temp.min)
       element.find(".temp .max .value").text(condition.temp.max)
       element.find(".wind .value").text(condition.speed+"ms")
       element.find(".humidity .value").text(condition.humidity+"%")
       element.find(".clouds .value").text(condition.clouds+"%")
       element.find(".description .value").text(condition.weather[0].description)
+      if(i==0) {
+        element.find(".custom-icon > img").attr('src', "img/wi-owm-"+condition.weather[0].id + ".png")
+      } else {
+        element.find(".custom-icon > img").attr('src', "img/wi-owm-"+condition.weather[0].id + "-small.png")
+      }
     }
     $("#weather > .row > .condition").addClass("col-md-4 col-md-offset-4")
     $("#weather #forecast > .condition").addClass("col-md-2 col-sm-4")
@@ -124,7 +133,7 @@ function renderBackground(){
   if(hours >= 18) moment = "twilight"
   if(hours >= 20) moment = "evening"
   if(hours >= 22) moment = "night"
-  var background_image = "backogroun-"+moment+".png"
+  var background_image = "background-"+moment+".png"
   $("body").css("background-image", "url('"+background_image+"')")
   console.log(background_image)
 }
