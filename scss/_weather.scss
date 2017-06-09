@@ -99,6 +99,14 @@
 
 
   #forecast {
+    img{
+      height: 60px;
+      width:auto;
+      padding-top: 100px;
+    }
+    /* Rectangle Copy 2: */
+    background-image: #FFFFFF;
+    font-size: 30px;
     padding-top: 100%;
     @include centered;
     label {

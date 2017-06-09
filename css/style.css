@@ -64,10 +64,17 @@ section {
     font-size: 8em; }
 
 #forecast {
+  /* Rectangle Copy 2: */
+  background-image: #FFFFFF;
+  font-size: 30px;
   padding-top: 100%;
   margin-left: auto;
   margin-right: auto;
   text-align: center; }
+  #forecast img {
+    height: 60px;
+    width: auto;
+    padding-top: 100px; }
   #forecast label {
     display: none; }
   #forecast .city, #forecast .wind, #forecast .clouds, #forecast .temp, #forecast .humidity {
