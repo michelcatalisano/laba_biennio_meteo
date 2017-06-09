@@ -64,7 +64,6 @@ section {
     font-size: 8em; }
 
 #forecast {
-  /* Rectangle Copy 2: */
   background-image: #FFFFFF;
   font-size: 30px;
   padding-top: 100%;
@@ -72,8 +71,8 @@ section {
   margin-right: auto;
   text-align: center; }
   #forecast img {
-    height: 60px;
-    width: auto;
+    height: auto;
+    width: 60px;
     padding-top: 100px; }
   #forecast label {
     display: none; }
