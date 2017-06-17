@@ -99,20 +99,29 @@
 
 
   #forecast {
-    img{
-      height: auto;
-      width:60px;
-      padding-top: 100px;
-    }
 
-    background-image: #FFFFFF;
+    background : green;
     font-size: 30px;
-    padding-top: 100%;
+    position: relative;
+    height: 100vh;
+    top:100vh;
+
+
     @include centered;
+    @include clearfix;
+
     label {
       display: none;
     }
-    .city, .wind, .clouds, .temp, .humidity,  {
+
+    img{
+      height: auto;
+      width:60px;
+      padding-top: 0;
+    }
+
+
+    .city, .wind, .clouds, .temp, .humidity, .custom-icon  {
       display: none;
     }
 

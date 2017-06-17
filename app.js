@@ -111,7 +111,7 @@ function renderWeather(data){
       if(i==0) {
         element.find(".custom-icon > img").attr('src', "img/wi-owm-"+condition.weather[0].id + ".png")
       } else {
-        element.find(".custom-icon > img").attr('src', "img/wi-owm-"+condition.weather[0].id + "-small.png")
+        element.find(".custom-icon-1 > img").attr('src', "img/wi-owm-"+condition.weather[0].id + "-small.png")
       }
     }
     $("#weather > .row > .condition").addClass("col-md-4 col-md-offset-4")

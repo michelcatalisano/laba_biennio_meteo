@@ -64,19 +64,25 @@ section {
     font-size: 8em; }
 
 #forecast {
-  background-image: #FFFFFF;
+  background: green;
   font-size: 30px;
-  padding-top: 100%;
+  position: relative;
+  height: 100vh;
+  top: 100vh;
   margin-left: auto;
   margin-right: auto;
   text-align: center; }
+  #forecast:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #forecast label {
+    display: none; }
   #forecast img {
     height: auto;
     width: 60px;
-    padding-top: 100px; }
-  #forecast label {
-    display: none; }
-  #forecast .city, #forecast .wind, #forecast .clouds, #forecast .temp, #forecast .humidity {
+    padding-top: 0; }
+  #forecast .city, #forecast .wind, #forecast .clouds, #forecast .temp, #forecast .humidity, #forecast .custom-icon {
     display: none; }
   #forecast .date {
     display: block; }
