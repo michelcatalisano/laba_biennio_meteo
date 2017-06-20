@@ -5,24 +5,19 @@
   color: white;
 
   .description{
-
     font-style: italic;
     font-size: 20px;
     padding-top: 20px;
-
   }
 
   .temp{
-
     font-size: 30px;
   }
-
-
-
 
     h1, h2 {
     text-align: center;
   }
+
   > .condition { // today condition
     .icon i.wi {
       font-size: 20em;
@@ -32,12 +27,30 @@
   &.wi-owm-800 {
     /* Rectangle 2: */
     background-image: linear-gradient(-180deg, #8DE1F5 0%, #FFF6F6 100%);
-
   }
 
   &.wi-owm-800:before{
     display: none;
   }
+
+  &.wi-owm-801 {
+    /* Rectangle 2: */
+    background-image: linear-gradient(-180deg, #0F748C 0%, #FFF6F6 100%);
+  }
+
+  &.wi-owm-801:before{
+    display: none;
+  }
+
+  &.wi-owm-500, &.wi-owm-501, &.wi-owm-502 {
+    /* Rectangle 2: */
+    background-image: linear-gradient(-180deg, #B8BEC0 0%, #FFF6F6 91%);
+  }
+
+  &.wi-owm-500:before, &.wi-owm-501, &.wi-owm-502:before{
+    display: none;
+  }
+
 
   .icon, .date, .wind, .clouds, .humidity, .min, .max  {
     display: none;
@@ -56,6 +69,7 @@
   .condition { // generic condition
     @include debug;
     position: relative;
+    top:5%;
 
     .custom-icon {
       position: absolute;
@@ -72,7 +86,7 @@
         display: none;
       }
       .date .value{
-        font-size: 1.7em;
+        font-size: 1.5em;
         font-weight: bold;
       }
     }
@@ -100,7 +114,7 @@
 
   #forecast {
 
-    background : green;
+    background : #90FFA0;
     font-size: 30px;
     position: relative;
     height: 100vh;

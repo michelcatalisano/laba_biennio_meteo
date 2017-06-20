@@ -1,5 +1,5 @@
 // change api
-var is_debug = true;
+var is_debug = false;
 var provider = "openweathermap";
 
 $(function(){
